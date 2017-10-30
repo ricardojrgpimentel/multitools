@@ -1,24 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Lekton:400,700')
+
 $Green: #43A047
 $Blue: #0288D1
 $White: #fff
+$break-xl: 1140px
+$break-lg: 960px
+$break-md: 720px
+$break-sm: 540px
 
 // remove paddings
-[class*="col-"]
+.row-col-no-padding > [class*="col-"]
   padding-left: 0 !important
   padding-right: 0 !important
+
+.row-no-padding
+  margin-left: 0 !important
+  margin-right: 0 !important
 
 .App
   background-color: #eee
   height: 100%
   min-height: 100vh
   color: #333
+  font-family: 'Lekton', sans-serif
 
 header.header
   background-color: $Green
   display: flex
   align-items: center
+  padding: 15px
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.10)
   &.h-blue
     background-color: $Blue
   &.h-white
     background-color: $White
+
+.site-title
+  font-size: 18px
+  font-weight: bold
+  margin: 0
+  & span
+    font-size: 14px

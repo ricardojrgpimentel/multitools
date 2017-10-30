@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as cryptoContentActions from '../../actions/cryptoContentActions'
+import Sidebar from '../Sidebar'
+import Body from '../Body'
 
 class Main extends Component {
 
@@ -20,17 +22,9 @@ class Main extends Component {
     return (
       <div className="App">
         <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-3 sidebar">
-              <header className='header h-blue'>
-                <h1 className="site-title">Crypto Convert</h1>
-              </header>
-            </div>
-            <div className="col-md-9">
-            <header className='header h-white'>
-              <h1 className="site-title">Crypto Convert</h1>
-            </header>
-            </div>
+          <div className="row row-col-no-padding">
+            <Sidebar />
+            <Body />
           </div>
         </div>
       </div>
