@@ -1,4 +1,24 @@
+$Green: #43A047
+$Blue: #0288D1
+$White: #fff
+
+// remove paddings
+[class*="col-"]
+  padding-left: 0 !important
+  padding-right: 0 !important
+
 .App
   background-color: #eee
   height: 100%
   min-height: 100vh
+  color: #333
+
+header.header
+  background-color: $Green
+  display: flex
+  align-items: center
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.10)
+  &.h-blue
+    background-color: $Blue
+  &.h-white
+    background-color: $White

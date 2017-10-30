@@ -1,4 +1,25 @@
+[class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
 .App {
   background-color: #eee;
+  height: 100%;
+  min-height: 100vh;
+  color: #333; }
+
+header.header {
+  background-color: #43A047;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); }
+  header.header.h-blue {
+    background-color: #0288D1; }
+  header.header.h-white {
+    background-color: #fff; }
+
+.sidebar {
+  background-color: #0288D1;
+  color: white;
   height: 100%;
   min-height: 100vh; }
