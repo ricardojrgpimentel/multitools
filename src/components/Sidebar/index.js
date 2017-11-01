@@ -5,7 +5,7 @@ class Sidebar extends React.Component{
         return (
             <div className="col-md-3 sidebar">
                 <header className='header h-blue'>
-                <h1 className="site-title">Crypto Convert <span className='site-subtitle'> - Cryptocurrencies</span></h1>
+                <h1 className="site-title">Multibox <span className='site-subtitle'> - Cryptocurrencies</span></h1>
                 </header>
             </div>
         )
