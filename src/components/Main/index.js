@@ -7,18 +7,8 @@ import Body from '../Body'
 
 class Main extends Component {
 
-	constructor(){
-		super()
-		this.handleClick =  this.handleClick.bind(this)
-	}
-
-	handleClick(){
-		console.log('PRESSED')
-		this.props.actions.fetchcoinList()
-	}
 
   render() {
-    console.log(this.props.response)
     return (
       <div className="App">
         <div className="container-fluid">
