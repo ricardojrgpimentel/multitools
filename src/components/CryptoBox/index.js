@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import * as cryptoContentActions from '../../actions/cryptoContentActions'
 
-class Box extends React.Component{
+class CryptoBox extends React.Component{
 
   componentWillMount(){
     this.props.actions.fetchCoinValue(this.props.coin.Name)
@@ -26,7 +26,6 @@ class Box extends React.Component{
       <div className="col-md-6">
         <div className="box">
           <h1 className='coin-title'>{COIN.FullName}</h1>
-          {console.log(COIN)}
           <p>Algorithm {COIN.Algorithm}</p>
           <div className='coin-info'>
             <img className='coin-logo' src={`https://cryptocompare.com${COIN.ImageUrl}`} alt={COIN.CoinName}/>
@@ -45,10 +44,9 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state){
-  console.log(state)
   return {
     coinValue: state.cryptoContentReducer,
    }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Box)
+export default connect(mapStateToProps, mapDispatchToProps)(CryptoBox)

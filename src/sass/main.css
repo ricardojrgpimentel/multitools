@@ -42,6 +42,20 @@ p {
   color: white;
   height: 100%;
   min-height: 100vh; }
+  .sidebar .multi-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 51px); }
+    .sidebar .multi-menu .link-wrapper .menu-entry {
+      color: #ffffff; }
+      .sidebar .multi-menu .link-wrapper .menu-entry h1 {
+        font-size: 18px;
+        margin: 5px 0; }
+      .sidebar .multi-menu .link-wrapper .menu-entry:hover {
+        text-decoration: none;
+        color: #ddd; }
   @media screen and (max-width: 720px) {
     .sidebar {
       height: 100%;
@@ -50,7 +64,7 @@ p {
 .main-content {
   padding: 5px;
   max-height: calc(100vh - 51px);
-  overflow-y: scroll; }
+  overflow-y: auto; }
 
 .box {
   margin: 5px;

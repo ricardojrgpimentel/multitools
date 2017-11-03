@@ -3,6 +3,21 @@
 	color: white
 	height: 100%
 	min-height: 100vh
+	.multi-menu
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		height: calc(100vh - 51px)
+		.link-wrapper
+			.menu-entry
+				color: #ffffff
+				h1
+					font-size: 18px
+					margin: 5px 0
+				&:hover
+					text-decoration: none
+					color: #ddd
 	@media screen and (max-width: $break-md)
 		height: 100%
 		min-height: 100%

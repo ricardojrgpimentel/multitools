@@ -8,6 +8,7 @@ import rootReducer from './reducers/rootReducer'
 import { createLogger } from 'redux-logger'
 import thunk from 'redux-thunk'
 import registerServiceWorker from './registerServiceWorker'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 const middleware = applyMiddleware(
   thunk,
@@ -18,7 +19,9 @@ let store = createStore(rootReducer, middleware)
 
 ReactDOM.render((
 	<Provider store={store}>
-		<Main />
+		<Router>
+			<Route path="/" component={Main}/>
+		</Router>
 	</Provider>
 	), document.getElementById('root'))
 registerServiceWorker()
