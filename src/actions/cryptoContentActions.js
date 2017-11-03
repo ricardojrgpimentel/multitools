@@ -32,3 +32,38 @@ export function fetchcoinList() {
     })
   }
 }
+
+export function fetchingCoinValue(coin){
+  return {
+    type: types.FETCHING_COIN_VALUE,
+    coin
+  }
+}
+
+export function receiveCoinValue(coin, response){
+  return {
+    type: types.RECEIVE_COIN_VALUE,
+    response,
+    coin
+  }
+}
+
+export function errorFetchingCoinValue(coin, error) {
+  return {
+    type: types.ERROR_FETCHING_COIN_VALUE,
+    error,
+    coin
+  }
+}
+
+export function fetchCoinValue(coin) {
+  return dispatch => {
+    dispatch(fetchingCoinValue(coin))
+    return cryptoCompare.coinValue(coin).then(response => {
+      dispatch(receiveCoinValue(coin, response))
+    }).catch(error => {
+      dispatch(errorFetchingCoinValue(coin, error))
+      throw(error)
+    })
+  }
+}

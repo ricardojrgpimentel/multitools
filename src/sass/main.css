@@ -19,7 +19,9 @@ header.header {
   display: flex;
   align-items: center;
   padding: 15px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 5; }
   header.header.h-blue {
     background-color: #0288D1; }
   header.header.h-white {
@@ -46,7 +48,9 @@ p {
       min-height: 100%; } }
 
 .main-content {
-  padding: 5px; }
+  padding: 5px;
+  max-height: calc(100vh - 51px);
+  overflow-y: scroll; }
 
 .box {
   margin: 5px;
@@ -59,3 +63,12 @@ p {
   margin: 0;
   border-bottom: 1px solid #ccc;
   font-weight: bold; }
+
+.coin-logo {
+  width: 50px;
+  height: 50px;
+  margin: 0 20px 0 10px; }
+
+.coin-info {
+  display: flex;
+  align-items: center; }

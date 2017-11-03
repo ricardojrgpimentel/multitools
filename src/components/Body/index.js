@@ -1,4 +1,5 @@
 import React from 'react'
+import Box from '../Box'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import * as workbenchRoomActions from '../../actions/workbenchRoomActions'
@@ -27,11 +28,10 @@ class Body extends React.Component{
       for(let coin in coinList.Data) {
         if(coinId === coinList.Data[coin].Id){
           coinDivs.push(
-            <div key={coinKey++} className="col-md-6">
-              <div className="box">
-                <h1 className='coin-title'>{coinList.Data[coin].FullName}</h1>
-              </div>
-            </div>
+            <Box 
+              coin={coinList.Data[coin]}
+              key={coinKey++}
+            />
           )
         } 
       }
