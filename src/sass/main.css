@@ -37,6 +37,9 @@ header.header {
 p {
   margin: 0; }
 
+*, *:before, *:after {
+  box-sizing: border-box; }
+
 .sidebar {
   background-color: #0288D1;
   color: white;
@@ -106,6 +109,7 @@ p {
       border: none;
       padding: 0 5px;
       outline: none;
+      width: 100%;
       border-bottom: 1px solid #999; }
     .coin-value-converter .input-wrapper .input-name {
       margin: 2px; }

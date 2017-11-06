@@ -6,7 +6,7 @@ class Sidebar extends React.Component{
         return (
             <div className="col-md-3 sidebar">
                 <header className='header h-blue'>
-                <h1 className="site-title">Multibox <span className='site-subtitle'> - online tools</span></h1>
+                <h1 className="site-title">Multibox <span className='site-subtitle'> - Alpha 0.1</span></h1>
                 </header>
                 <div className="multi-menu">
                     <div className="link-wrapper">

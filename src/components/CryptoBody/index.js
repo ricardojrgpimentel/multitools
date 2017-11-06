@@ -23,7 +23,8 @@ class CryptoBody extends React.Component{
   }
 
   componentWillMount(){
-    this.props.actions.fetchcoinList()
+    console.log('called')
+    !this.props.coinList && this.props.actions.fetchcoinList()
   }
   
   handleCoinList(coinList, coinsToFetch){
@@ -45,15 +46,43 @@ class CryptoBody extends React.Component{
     return coinDivs
   }
 
+  handleCoinSelect(coinList, coinsToFetch){
+    let coinDivs = []
+    let coinKey = 1
+
+    for(let coinId of coinsToFetch) {
+      for(let coin in coinList.Data) {
+        if(coinId !== coinList.Data[coin].Id){
+          coinDivs.push(
+            <option 
+              value={coinList.Data[coin].Name}
+              key={coinKey++}
+            >
+              {coinList.Data[coin].Name}
+            </option>
+          )
+        } 
+      }
+    }
+    return coinDivs
+  }
+
   render(){
     return(
       <div className="row row-no-padding row-col-no-padding main-content">
+        {/*<div className="col-md-12">
+          <div className="box">
+            <select name="" id="">
+            {this.props.coinList ? this.handleCoinSelect(this.props.coinList, this.props.coinList.DefaultWatchlist.CoinIs.split(',')) : <option value="">Loading...</option>}
+            </select>
+          </div>
+        </div>*/}
+        {this.props.coinList ? this.handleCoinList(this.props.coinList, this.props.coinList.DefaultWatchlist.CoinIs.split(',')) : 'Loading...'}
         <div className="col-md-12">
           <div onClick={this.handleClick} className="box">
-            TESTE
+            API by CryptoCompare
           </div>
         </div>
-        {this.props.coinList ? this.handleCoinList(this.props.coinList, this.props.coinList.DefaultWatchlist.CoinIs.split(',')) : 'Loading...'}
       </div>
     )
   }
