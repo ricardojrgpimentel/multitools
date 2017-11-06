@@ -40,6 +40,22 @@ p {
 *, *:before, *:after {
   box-sizing: border-box; }
 
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px 10px 5px; }
+
+input {
+  border: none;
+  padding: 0 5px;
+  outline: none;
+  width: 100%;
+  border-bottom: 1px solid #999; }
+
+.input-name {
+  margin: 2px; }
+
 .sidebar {
   background-color: #0288D1;
   color: white;
@@ -100,16 +116,3 @@ p {
   align-items: center;
   flex-direction: column;
   padding: 0 10px; }
-  .coin-value-converter .input-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px 10px 5px; }
-    .coin-value-converter .input-wrapper input {
-      border: none;
-      padding: 0 5px;
-      outline: none;
-      width: 100%;
-      border-bottom: 1px solid #999; }
-    .coin-value-converter .input-wrapper .input-name {
-      margin: 2px; }
