@@ -19,6 +19,9 @@ class Sidebar extends React.Component{
                         <Link className='menu-entry' to={'/timeconverter'}>
                             <h1>Timestamp Converter</h1>
                         </Link>
+                        <Link className='menu-entry' to={'/ratiocalculator'}>
+                            <h1>Screen Ratio Calculator</h1>
+                        </Link>
                     </div>
                 </div>
             </div>
