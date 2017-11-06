@@ -113,7 +113,7 @@ class CryptoBox extends React.Component{
       <div className="col-md-6">
         <div className="box">
           <h1 className='coin-title'>{COIN.FullName}</h1>
-          <p>Algorithm {COIN.Algorithm}</p>
+          <p className='algorithm-type'>Algorithm: {COIN.Algorithm}</p>
           <div className='coin-info'>
             <img className='coin-logo' src={`https://cryptocompare.com${COIN.ImageUrl}`} alt={COIN.CoinName}/>
             {this.props.coinValue[`${COIN.Name}ValueLoading`] ? <p>Loading...</p> : this.renderCoinValue()}
