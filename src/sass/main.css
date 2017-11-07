@@ -138,7 +138,8 @@ input {
 .resolution-input-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin: 10px 0; }
 
 .tv span {
   font-size: 11px; }

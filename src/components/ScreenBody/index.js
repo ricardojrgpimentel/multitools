@@ -6,7 +6,9 @@ class ScreenBody extends React.Component{
     super()
     this.state = {
       width: window.screen.width,
-      height: window.screen.height
+      height: window.screen.height,
+      width2: '',
+      height2: ''
     }
   }
 
@@ -76,6 +78,28 @@ class ScreenBody extends React.Component{
     }
   }
 
+  calculateRatioByDimension(e, field){
+    const RexNumberCheck = /^[0-9]*$/
+    if(e.target.value === '' || RexNumberCheck.test(e.target.value)){
+      if(this.state.width && this.state.height){
+        if(field === 'width2'){
+          this.setState({
+            ...this.state,
+            width2: e.target.value,
+            height2: Math.round((this.state.height / this.state.width) * e.target.value)
+          })
+        }
+        else{
+          this.setState({
+            ...this.state,
+            height2: e.target.value,
+            width2: Math.round((this.state.width / this.state.height) * e.target.value)
+          })
+        }
+      }
+    }
+  }
+
   render(){
 
     let dimensions = this.ratio2css(this.state.width, this.state.height)
@@ -94,11 +118,16 @@ class ScreenBody extends React.Component{
               </div>
             </div>
             <div className="col-md-6">
-              Screen Ratio Calculator
+              Screen Size
               <div className="resolution-input-wrapper">
                 <input onChange={(e) => {this.handleSize(e, 'width')}} name='width' value={this.state.width} type="text"/> 
                 x 
                 <input onChange={(e) => {this.handleSize(e, 'height')}} name='height' value={this.state.height} type="text"/>
+              </div>
+              <div className="resolution-input-wrapper">
+                <input onChange={(e) => {this.calculateRatioByDimension(e, 'width2')}} name='width' value={this.state.width2} type="text"/> 
+                x 
+                <input onChange={(e) => {this.calculateRatioByDimension(e, 'height2')}} name='height' value={this.state.height2} type="text"/>
               </div>
             </div>
           </div>
