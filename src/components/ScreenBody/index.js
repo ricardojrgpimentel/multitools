@@ -58,9 +58,27 @@ class ScreenBody extends React.Component{
       }
   }
 
+  handleSize(e, field){
+    const RexNumberCheck = /^[0-9]*$/
+    if(e.target.value === '' || RexNumberCheck.test(e.target.value)){
+      if(field === 'width'){
+        this.setState({
+          ...this.state,
+          width: e.target.value
+        })
+      }
+      else{
+        this.setState({
+          ...this.state,
+          height: e.target.value
+        })
+      }
+    }
+  }
+
   render(){
 
-    let dimensions = this.ratio2css(window.screen.width, window.screen.height)
+    let dimensions = this.ratio2css(this.state.width, this.state.height)
     
     let recWidth = dimensions.width
     let recHeight = dimensions.height
@@ -70,21 +88,25 @@ class ScreenBody extends React.Component{
       <div className="row row-no-padding row-col-no-padding main-content">
         <div className="col-md-6">
           <div className="box row">
-            <div className="col-md-6">
+            <div className="col-md-6 total-center">
               <div className='tv' style={{width: recWidth, height: recHeight}}>
                 <span style={{lineHeight: recLineHeight}}>Screen</span>
               </div>
             </div>
             <div className="col-md-6">
               Screen Ratio Calculator
-
+              <div className="resolution-input-wrapper">
+                <input onChange={(e) => {this.handleSize(e, 'width')}} name='width' value={this.state.width} type="text"/> 
+                x 
+                <input onChange={(e) => {this.handleSize(e, 'height')}} name='height' value={this.state.height} type="text"/>
+              </div>
             </div>
           </div>
         </div>
         <div className="col-md-6">
           <div className="box">
-            <p>Screen Resolution: {window.screen.width}x{window.screen.height}</p>
-            <p>Aspect Ratio: {this.reduceRatio(window.screen.width, window.screen.height)}</p>
+            <p>Screen Resolution: {this.state.width}x{this.state.height}</p>
+            <p>Aspect Ratio: {this.reduceRatio(this.state.width, this.state.height)}</p>
             <p>Color Depth: {window.screen.colorDepth}</p>
           </div>
         </div>
