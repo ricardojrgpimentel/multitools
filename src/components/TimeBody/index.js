@@ -7,7 +7,8 @@ class TimeBody extends React.Component{
   constructor(){
     super()
     this.state = {
-      date: moment().unix()
+      date: moment().unix(),
+      humanDate: false
     }
     this.saveDate = this.saveDate.bind(this)
     this.handleConvertDate = this.handleConvertDate.bind(this)
@@ -21,8 +22,10 @@ class TimeBody extends React.Component{
   }
 
   handleConvertDate(){
-    console.log(this.state.date)
-    console.log(moment(this.state.date))
+    this.setState({
+      ...this.state,
+      humanDate: moment.unix(this.state.date).format("dddd DD MMMM YYYY HH:mm:ss Z")
+    })
   }
 
   render(){
@@ -35,8 +38,9 @@ class TimeBody extends React.Component{
               <div>
                 <input onChange={(e) => {this.saveDate(e)}} type="text" value={this.state.date}/>
               </div>
-              <button onClick={this.handleConvertDate}>Timestamp to Human Date</button>
+              <button className='btn-multibox' onClick={this.handleConvertDate}>Timestamp to Human Date</button>
             </div>
+            {this.state.humanDate}
           </div>
         </div>
       </div>

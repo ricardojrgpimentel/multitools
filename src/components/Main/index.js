@@ -6,6 +6,7 @@ import * as cryptoContentActions from '../../actions/cryptoContentActions'
 import Sidebar from '../Sidebar'
 import CryptoBody from '../CryptoBody'
 import TimeBody from '../TimeBody'
+import ScreenBody from '../ScreenBody'
 
 class Main extends Component {
 
@@ -20,6 +21,9 @@ class Main extends Component {
         break
       case '/timeconverter':
         title = 'Timestamp Converter'
+        break
+      case '/ratiocalculator':
+        title = 'Screen Ratio Calculator'
         break
       default:
         title = 'Home'
@@ -37,6 +41,7 @@ class Main extends Component {
               </header>
               <Route path={'/cryptoconverter'} component={CryptoBody}/>
               <Route path={'/timeconverter'} component={TimeBody}/>
+              <Route path={'/ratiocalculator'} component={ScreenBody}/>
             </div>
           </div>
         </div>
