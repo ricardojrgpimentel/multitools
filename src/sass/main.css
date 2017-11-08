@@ -143,3 +143,13 @@ input {
 
 .tv span {
   font-size: 11px; }
+
+input.date {
+  width: inherit;
+  margin: 0 5px; }
+
+.calculated-date {
+  padding-top: 10px; }
+
+.string-date-description {
+  padding-bottom: 10px; }

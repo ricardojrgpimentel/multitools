@@ -100,6 +100,69 @@ class ScreenBody extends React.Component{
     }
   }
 
+  handleDeviceSize(e){
+    switch(e.target.value){
+      case 'pixel2xl':
+        this.setState({
+          ...this.state,
+          width: '1440',
+          height: '2880'
+        })
+        break
+      case 'iphonex':
+        this.setState({
+          ...this.state,
+          width: '1125',
+          height: '2436'
+        })
+        break
+      case 'fullhd':
+        this.setState({
+          ...this.state,
+          width: '1920',
+          height: '1080'
+        })
+        break
+      case 'hdready':
+        this.setState({
+          ...this.state,
+          width: '1280',
+          height: '720'
+        })
+        break
+      case 'fullhdinverted':
+        this.setState({
+          ...this.state,
+          width: '1080',
+          height: '1920'
+        })
+        break
+      case '4k':
+        this.setState({
+          ...this.state,
+          width: '3840',
+          height: '2160'
+        })
+        break
+      case '5k':
+        this.setState({
+          ...this.state,
+          width: '5120',
+          height: '2880'
+        })
+        break
+      case '8k':
+        this.setState({
+          ...this.state,
+          width: '7680',
+          height: '4320'
+        })
+        break
+      default:
+
+    }
+  }
+
   render(){
 
     let dimensions = this.ratio2css(this.state.width, this.state.height)
@@ -124,6 +187,7 @@ class ScreenBody extends React.Component{
                 x 
                 <input onChange={(e) => {this.handleSize(e, 'height')}} name='height' value={this.state.height} type="text"/>
               </div>
+              Resize with the same Aspect Ratio
               <div className="resolution-input-wrapper">
                 <input onChange={(e) => {this.calculateRatioByDimension(e, 'width2')}} name='width' value={this.state.width2} type="text"/> 
                 x 
@@ -137,6 +201,16 @@ class ScreenBody extends React.Component{
             <p>Screen Resolution: {this.state.width}x{this.state.height}</p>
             <p>Aspect Ratio: {this.reduceRatio(this.state.width, this.state.height)}</p>
             <p>Color Depth: {window.screen.colorDepth}</p>
+            <select onChange={(e) => {this.handleDeviceSize(e)}} name="screen-size">
+              <option value="8k">7680x4320 (8K)</option>
+              <option value="5k">5120x2880 (5K, iMac)</option>
+              <option value="4k">3840x2160 (4K UHD)</option>
+              <option value="pixel2xl">1440x2880 (Pixel 2 XL)</option>
+              <option value="iphonex">1125x2436 (iPhone X)</option>
+              <option value="fullhd">1920x1080 (FullHD)</option>
+              <option value="fullhdinverted">1080x1920 (iPhone 6/7 Plus)</option>
+              <option value="hdready">1280x720 (HD Ready)</option>
+            </select>
           </div>
         </div>
       </div>
