@@ -10,6 +10,7 @@
 		flex-direction: column
 		height: calc(100vh - 51px)
 		.link-wrapper
+			padding: 10px
 			.menu-entry
 				color: #ffffff
 				h1
@@ -21,3 +22,16 @@
 	@media screen and (max-width: $break-md)
 		height: 100%
 		min-height: 100%
+		.multi-menu
+			height: inherit
+			flex-direction: row
+			.link-wrapper
+				display: flex
+				justify-content: center
+				align-items: center
+				margin: 10px
+				.menu-entry
+					&:not(:last-child)
+						margin-right: 5px
+						padding-right: 5px
+						border-right: 1px solid white

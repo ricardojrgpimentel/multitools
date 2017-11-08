@@ -67,6 +67,33 @@ input {
   align-items: center;
   display: flex; }
 
+h2.main-title {
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px; }
+
+.category-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px; }
+  .category-wrapper a {
+    text-align: center; }
+    .category-wrapper a img.icon-category {
+      margin: 10px; }
+    .category-wrapper a h3.title {
+      text-align: center;
+      font-size: 18px; }
+
+.credits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
 .sidebar {
   background-color: #0288D1;
   color: white;
@@ -78,18 +105,32 @@ input {
     align-items: center;
     flex-direction: column;
     height: calc(100vh - 51px); }
-    .sidebar .multi-menu .link-wrapper .menu-entry {
-      color: #ffffff; }
-      .sidebar .multi-menu .link-wrapper .menu-entry h1 {
-        font-size: 18px;
-        margin: 5px 0; }
-      .sidebar .multi-menu .link-wrapper .menu-entry:hover {
-        text-decoration: none;
-        color: #ddd; }
-  @media screen and (max-width: 720px) {
+    .sidebar .multi-menu .link-wrapper {
+      padding: 10px; }
+      .sidebar .multi-menu .link-wrapper .menu-entry {
+        color: #ffffff; }
+        .sidebar .multi-menu .link-wrapper .menu-entry h1 {
+          font-size: 18px;
+          margin: 5px 0; }
+        .sidebar .multi-menu .link-wrapper .menu-entry:hover {
+          text-decoration: none;
+          color: #ddd; }
+  @media screen and (max-width: 768px) {
     .sidebar {
       height: 100%;
-      min-height: 100%; } }
+      min-height: 100%; }
+      .sidebar .multi-menu {
+        height: inherit;
+        flex-direction: row; }
+        .sidebar .multi-menu .link-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 10px; }
+          .sidebar .multi-menu .link-wrapper .menu-entry:not(:last-child) {
+            margin-right: 5px;
+            padding-right: 5px;
+            border-right: 1px solid white; } }
 
 .main-content {
   padding: 5px;

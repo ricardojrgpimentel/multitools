@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as cryptoContentActions from '../../actions/cryptoContentActions'
 import Sidebar from '../Sidebar'
+import Body from './Body'
 import CryptoBody from '../CryptoBody'
 import TimeBody from '../TimeBody'
 import ScreenBody from '../ScreenBody'
@@ -39,6 +40,7 @@ class Main extends Component {
               <header className='header h-white'>
                 <h1 className="site-title">{title}</h1>
               </header>
+              <Route exact path={'/'} component={Body}/>
               <Route path={'/cryptoconverter'} component={CryptoBody}/>
               <Route path={'/timeconverter'} component={TimeBody}/>
               <Route path={'/ratiocalculator'} component={ScreenBody}/>
