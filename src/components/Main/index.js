@@ -8,6 +8,7 @@ import Body from './Body'
 import CryptoBody from '../CryptoBody'
 import TimeBody from '../TimeBody'
 import ScreenBody from '../ScreenBody'
+import ColorBody from '../ColorBody'
 
 class Main extends Component {
 
@@ -25,6 +26,9 @@ class Main extends Component {
         break
       case '/ratiocalculator':
         title = 'Screen Ratio Calculator'
+        break
+      case '/colortools':
+        title = 'Color Tools'
         break
       default:
         title = 'Home'
@@ -44,6 +48,7 @@ class Main extends Component {
               <Route path={'/cryptoconverter'} component={CryptoBody}/>
               <Route path={'/timeconverter'} component={TimeBody}/>
               <Route path={'/ratiocalculator'} component={ScreenBody}/>
+              <Route path={'/colortools'} component={ColorBody}/>
             </div>
           </div>
         </div>

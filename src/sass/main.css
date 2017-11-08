@@ -125,12 +125,11 @@ h2.main-title {
         .sidebar .multi-menu .link-wrapper {
           display: flex;
           justify-content: center;
-          align-items: center;
+          flex-direction: column;
           margin: 10px; }
-          .sidebar .multi-menu .link-wrapper .menu-entry:not(:last-child) {
-            margin-right: 5px;
-            padding-right: 5px;
-            border-right: 1px solid white; } }
+          .sidebar .multi-menu .link-wrapper .menu-entry {
+            padding-left: 10px;
+            border-left: 1px solid white; } }
 
 .main-content {
   padding: 5px;
@@ -194,3 +193,36 @@ input.date {
 
 .string-date-description {
   padding-bottom: 10px; }
+
+.contraster {
+  display: flex;
+  flex-direction: column-reverse; }
+  .contraster .color-wrapper {
+    padding: 10px; }
+
+.color-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .color-box .color-text {
+    font-size: 20px;
+    margin: 50px;
+    text-transform: uppercase; }
+
+.color-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  text-decoration: underline;
+  font-weight: bold;
+  line-height: 15px; }
+
+.color-pickers {
+  display: flex;
+  flex-direction: column; }
+
+.github-picker:first-of-type {
+  margin-bottom: 10px; }

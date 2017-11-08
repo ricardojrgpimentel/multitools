@@ -22,6 +22,9 @@ class Sidebar extends React.Component{
                         <Link className='menu-entry' to={'/ratiocalculator'}>
                             <h1>Screen Ratio Calculator</h1>
                         </Link>
+                        <Link className='menu-entry' to={'/colortools'}>
+                            <h1>Color Tools</h1>
+                        </Link>
                     </div>
                 </div>
             </div>
