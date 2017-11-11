@@ -1,5 +1,6 @@
 import React from 'react'
 import { GithubPicker } from 'react-color'
+import ColorPalette from './colorPalette'
 
 class ColorBody extends React.Component{
 
@@ -66,22 +67,23 @@ class ColorBody extends React.Component{
         <div className="col-md-6">
           <div className="box color-pickers">
             <p>Text</p>
-            <GithubPicker 
+            <GithubPicker
               triangle={'hide'}
               width={'100%'}
               onChange={(c,e) => {this.setState({...this.state, text: c.hex})}}
             />
             <p>Background</p>
-            <GithubPicker 
+            <GithubPicker
               triangle={'hide'}
               width={'100%'}
               onChange={(c,e) => {this.setState({...this.state, background: c.hex})}}
             />
           </div>
         </div>
+        <ColorPalette />
       </div>
     )
   }
 }
 
-export default ColorBody 
+export default ColorBody
