@@ -1,6 +1,6 @@
 import React from 'react'
 import { GithubPicker } from 'react-color'
-import ColorPalette from './colorPalette'
+import ColorSwatch from './colorSwatch'
 
 class ColorBody extends React.Component{
 
@@ -80,7 +80,7 @@ class ColorBody extends React.Component{
             />
           </div>
         </div>
-        <ColorPalette />
+        <ColorSwatch />
       </div>
     )
   }
