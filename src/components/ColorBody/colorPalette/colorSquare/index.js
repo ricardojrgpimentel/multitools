@@ -22,7 +22,7 @@ class ColorSquare extends React.Component{
 
     return(
       <CopyToClipboard text={this.props.hex}>
-        <div className='col-4'>
+        <div className='col-4 hvr-grow'>
           <div className='color-square' style={{backgroundColor: this.props.hex}}>
             <p style={{color: bC}}>{this.props.color}</p>
           </div>
