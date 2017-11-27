@@ -9,6 +9,7 @@ import CryptoBody from '../CryptoBody'
 import TimeBody from '../TimeBody'
 import ScreenBody from '../ScreenBody'
 import ColorBody from '../ColorBody'
+import CryptoCheck from '../CryptoCheck'
 
 class Main extends Component {
 
@@ -30,6 +31,9 @@ class Main extends Component {
       case '/colortools':
         title = 'Color Tools'
         break
+      case '/cryptostats':
+        title = 'Crypto Stats'
+        break
       default:
         title = 'Home'
         break
@@ -49,6 +53,7 @@ class Main extends Component {
               <Route path={'/timeconverter'} component={TimeBody}/>
               <Route path={'/ratiocalculator'} component={ScreenBody}/>
               <Route path={'/colortools'} component={ColorBody}/>
+              <Route path={'/cryptostats'} component={CryptoCheck}/>
             </div>
           </div>
         </div>
