@@ -36,6 +36,23 @@ export default function cryptoContentReducer(state = {}, action){
         [`${action.coin}Value`]: action.response,
         [`${action.coin}ValueLoading`]: false
       }
+    case types.ERROR_FETCHING_COIN_SNAPSHOT:
+      return {
+        ...state,
+        errorSnapshot: action.error,
+        [`${action.coin}SnapshotLoading`]: false
+      }
+    case types.FETCHING_COIN_SNAPSHOT:
+      return {
+        ...state,
+        [`${action.coin}SnapshotLoading`]: true
+      }
+    case types.RECEIVE_COIN_SNAPSHOT:
+      return {
+        ...state,
+        [`${action.coin}Snapshot`]: action.response,
+        [`${action.coin}SnapshotLoading`]: false
+      }
     default:
       return state
   }

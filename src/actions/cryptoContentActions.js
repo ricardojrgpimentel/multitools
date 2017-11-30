@@ -67,3 +67,38 @@ export function fetchCoinValue(coin) {
     })
   }
 }
+
+export function fetchingCoinSnapshot(coin){
+  return {
+    type: types.FETCHING_COIN_SNAPSHOT,
+    coin
+  }
+}
+
+export function receiveCoinSnapshot(coin, response){
+  return {
+    type: types.RECEIVE_COIN_SNAPSHOT,
+    response,
+    coin
+  }
+}
+
+export function errorFetchingCoinSnapshot(coin, error) {
+  return {
+    type: types.ERROR_FETCHING_COIN_SNAPSHOT,
+    error,
+    coin
+  }
+}
+
+export function fetchCoinSnapshot(coin) {
+  return dispatch => {
+    dispatch(fetchingCoinSnapshot(coin))
+    return cryptoCompare.coinSnapshot(coin).then(response => {
+      dispatch(receiveCoinSnapshot(coin, response))
+    }).catch(error => {
+      dispatch(errorFetchingCoinSnapshot(coin, error))
+      throw(error)
+    })
+  }
+}
