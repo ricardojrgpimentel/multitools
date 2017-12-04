@@ -10,6 +10,7 @@ import TimeBody from '../TimeBody'
 import ScreenBody from '../ScreenBody'
 import ColorBody from '../ColorBody'
 import CryptoCheck from '../CryptoCheck'
+import Coin from '../Coin'
 
 class Main extends Component {
 
@@ -38,7 +39,7 @@ class Main extends Component {
         title = 'Home'
         break
     }
-    
+
     return (
       <div className="App">
         <div className="container-fluid">
@@ -54,6 +55,7 @@ class Main extends Component {
               <Route path={'/ratiocalculator'} component={ScreenBody}/>
               <Route path={'/colortools'} component={ColorBody}/>
               <Route path={'/cryptostats'} component={CryptoCheck}/>
+              <Route path={'/coin/:coin'} component={Coin}/>
             </div>
           </div>
         </div>

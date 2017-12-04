@@ -252,16 +252,15 @@ input.date {
     z-index: 10;
     cursor: default; }
 
-.CryptoCheck {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 5px 0; }
-  .CryptoCheck .col-content.coin-name {
-    display: flex; }
-  .CryptoCheck .col-content.coin-value {
-    display: flex; }
-  .CryptoCheck .coin-logo {
+.table-coins {
+  width: 100%; }
+  .table-coins tr {
+    border-bottom: 1px solid #e1e1e1; }
+  .table-coins .coin-logo {
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    margin: 10px; }
+  .table-coins .center {
+    text-align: center; }
+  .table-coins .right {
+    text-align: right; }
