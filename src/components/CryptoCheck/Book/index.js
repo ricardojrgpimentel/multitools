@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import * as cryptoContentActions from '../../../actions/cryptoContentActions'
+import { Link } from 'react-router-dom'
 
 class Book extends React.Component{
 
@@ -19,12 +20,10 @@ class Book extends React.Component{
   }
 
   render(){
-    console.log(this.props.coinSnapshot)
-    
     return(
       <tr>
         <td><img className='coin-logo' src={`https://cryptocompare.com${this.props.coin.ImageUrl}`} alt={this.props.coin.Name}/></td>
-        <td>{this.props.coin.FullName}</td>
+        <td><Link to={`/coin/${this.props.coin.Name}`}>{this.props.coin.FullName}</Link></td>
         <td className='center'>{this.props.coinSnapshot[`${this.props.coin.Name}Snapshot`] &&
           this.moveEuroSymbol(this.props.coinSnapshot[`${this.props.coin.Name}Snapshot`].DISPLAY[this.props.coin.Name].EUR.PRICE)}</td>
         <td className='right'>{this.props.coinSnapshot[`${this.props.coin.Name}Snapshot`] &&

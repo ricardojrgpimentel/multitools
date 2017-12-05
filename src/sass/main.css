@@ -264,3 +264,38 @@ input.date {
     text-align: center; }
   .table-coins .right {
     text-align: right; }
+
+.main-content-sides {
+  padding: 0 5px; }
+
+.coin-info .coin-logo-2x {
+  width: 100%; }
+
+.coin-info .box-info {
+  box-shadow: 1px 1px 1px #e1e1e1;
+  margin-bottom: 10px; }
+  .coin-info .box-info .box-header {
+    background-color: #0288D1;
+    padding: 5px 10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+    .coin-info .box-info .box-header h2.header {
+      font-size: 20px;
+      color: #fff;
+      margin: 0;
+      font-weight: bold; }
+  .coin-info .box-info .box-body {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 10px 10px; }
+
+.box-tags {
+  display: flex;
+  flex-wrap: wrap; }
+  .box-tags a {
+    margin: 5px 2px; }
+    .box-tags a .coin-tag {
+      padding: 2px 5px;
+      background-color: #43a047;
+      color: #fff;
+      border-radius: 3px; }
