@@ -23,7 +23,7 @@ class Book extends React.Component{
     return(
       <tr>
         <td><img className='coin-logo' src={`https://cryptocompare.com${this.props.coin.ImageUrl}`} alt={this.props.coin.Name}/></td>
-        <td><Link to={`/coin/${this.props.coin.Name}`}>{this.props.coin.FullName}</Link></td>
+        <td><Link to={`${process.env.PUBLIC_URL}/coin/${this.props.coin.Name}`}>{this.props.coin.FullName}</Link></td>
         <td className='center'>{this.props.coinSnapshot[`${this.props.coin.Name}Snapshot`] &&
           this.moveEuroSymbol(this.props.coinSnapshot[`${this.props.coin.Name}Snapshot`].DISPLAY[this.props.coin.Name].EUR.PRICE)}</td>
         <td className='right'>{this.props.coinSnapshot[`${this.props.coin.Name}Snapshot`] &&

@@ -72,7 +72,7 @@ class Coin extends React.Component{
     let otherCoins = []
     for (let coin in this.props.coinList.Data){
       otherCoins.push(
-        <Link to={`/coin/${coin}`} key={coin}>
+        <Link to={`${process.env.PUBLIC_URL}/coin/${coin}`} key={coin}>
           <span className='coin-tag'>{coin}</span>
         </Link>
       )

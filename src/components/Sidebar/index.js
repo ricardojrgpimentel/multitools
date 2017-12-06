@@ -10,22 +10,22 @@ class Sidebar extends React.Component {
         </header>
         <div className="multi-menu">
           <div className="link-wrapper">
-            <Link className='menu-entry' to={'/'}>
+            <Link className='menu-entry' to={`${process.env.PUBLIC_URL}/`}>
               <h1>Home</h1>
             </Link>
-            <Link className='menu-entry' to={'/cryptoconverter'}>
+            <Link className='menu-entry' to={`${process.env.PUBLIC_URL}/cryptoconverter`}>
               <h1>Crypto Coins Converter</h1>
             </Link>
-            <Link className='menu-entry' to={'/cryptostats'}>
+            <Link className='menu-entry' to={`${process.env.PUBLIC_URL}/cryptostats`}>
               <h1>Crypto Coins Stats</h1>
             </Link>
-            <Link className='menu-entry' to={'/timeconverter'}>
+            <Link className='menu-entry' to={`${process.env.PUBLIC_URL}/timeconverter`}>
               <h1>Timestamp Converter</h1>
             </Link>
-            <Link className='menu-entry' to={'/ratiocalculator'}>
+            <Link className='menu-entry' to={`${process.env.PUBLIC_URL}/ratiocalculator`}>
               <h1>Screen Ratio Calculator</h1>
             </Link>
-            <Link className='menu-entry' to={'/colortools'}>
+            <Link className='menu-entry' to={`${process.env.PUBLIC_URL}/colortools`}>
               <h1>Color Tools</h1>
             </Link>
           </div>
