@@ -2,7 +2,7 @@
   "name": "cryptoconvert",
   "version": "0.1.0",
   "private": false,
-  "homepage": "http://multitools.site",
+  "homepage": "https://ricardojrgpimentel.github.io/multitools",
   "dependencies": {
     "moment": "^2.19.1",
     "node-sass-chokidar": "0.0.3",
