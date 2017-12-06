@@ -20,7 +20,7 @@ let store = createStore(rootReducer, middleware)
 ReactDOM.render((
 	<Provider store={store}>
 		<Router>
-			<Route path="/" component={Main}/>
+			<Route path={`${process.env.PUBLIC_URL}/`} component={Main}/>
 		</Router>
 	</Provider>
 	), document.getElementById('root'))

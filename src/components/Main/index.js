@@ -50,12 +50,12 @@ class Main extends Component {
                 <h1 className="site-title">{title}</h1>
               </header>
               <Route exact path={'/'} component={Body}/>
-              <Route path={'/cryptoconverter'} component={CryptoBody}/>
-              <Route path={'/timeconverter'} component={TimeBody}/>
-              <Route path={'/ratiocalculator'} component={ScreenBody}/>
-              <Route path={'/colortools'} component={ColorBody}/>
-              <Route path={'/cryptostats'} component={CryptoCheck}/>
-              <Route path={'/coin/:coin'} component={Coin}/>
+              <Route path={`${process.env.PUBLIC_URL}/cryptoconverter`} component={CryptoBody}/>
+              <Route path={`${process.env.PUBLIC_URL}/timeconverter`} component={TimeBody}/>
+              <Route path={`${process.env.PUBLIC_URL}/ratiocalculator`} component={ScreenBody}/>
+              <Route path={`${process.env.PUBLIC_URL}/colortools`} component={ColorBody}/>
+              <Route path={`${process.env.PUBLIC_URL}/cryptostats`} component={CryptoCheck}/>
+              <Route path={`${process.env.PUBLIC_URL}/coin/:coin`} component={Coin}/>
             </div>
           </div>
         </div>
