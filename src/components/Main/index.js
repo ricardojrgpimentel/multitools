@@ -17,22 +17,22 @@ class Main extends Component {
   render() {
     let title
     switch(this.props.location.pathname){
-      case '/':
+      case `${process.env.PUBLIC_URL}/`:
         title = 'Home'
         break
-      case '/cryptoconverter':
+      case `${process.env.PUBLIC_URL}/cryptoconverter`:
         title = 'Crypto Converter'
         break
-      case '/timeconverter':
+      case `${process.env.PUBLIC_URL}/timeconverter`:
         title = 'Timestamp Converter'
         break
-      case '/ratiocalculator':
+      case `${process.env.PUBLIC_URL}/ratiocalculator`:
         title = 'Screen Ratio Calculator'
         break
-      case '/colortools':
+      case `${process.env.PUBLIC_URL}/colortools`:
         title = 'Color Tools'
         break
-      case '/cryptostats':
+      case `${process.env.PUBLIC_URL}/cryptostats`:
         title = 'Crypto Stats'
         break
       default:
@@ -49,7 +49,7 @@ class Main extends Component {
               <header className='header h-white'>
                 <h1 className="site-title">{title}</h1>
               </header>
-              <Route exact path={'/'} component={Body}/>
+              <Route exact path={`${process.env.PUBLIC_URL}/`} component={Body}/>
               <Route path={`${process.env.PUBLIC_URL}/cryptoconverter`} component={CryptoBody}/>
               <Route path={`${process.env.PUBLIC_URL}/timeconverter`} component={TimeBody}/>
               <Route path={`${process.env.PUBLIC_URL}/ratiocalculator`} component={ScreenBody}/>
